@@ -1,4 +1,4 @@
-name: PandesalSMP
+name: Pandecoin
 version: '${project.version}'
-main: plugin.pandecoin.PandesalSMP
+main: plugin.pandecoin.PandeCoin
 api-version: 1.19
