@@ -11,8 +11,8 @@ import plugin.pandecoin.Items.ItemPandeCoin;
 public class RecipePandeCoin {
     public static void registerRecipe(JavaPlugin plugin) {
         //Getting the PandeCoin item from other class
-        ItemPandeCoin pandecoinItem = new ItemPandeCoin();
-        ItemStack item = pandecoinItem.pandecoin();
+        ItemPandeCoin itemPandeCoin = new ItemPandeCoin();
+        ItemStack item = itemPandeCoin.pandecoin();
         //Creating the custom recipe for the item
         ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "pandesal_coin"), item);
         recipe.shape("BBB", "BDB", "BBB");

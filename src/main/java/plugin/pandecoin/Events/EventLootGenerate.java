@@ -18,10 +18,10 @@ public class EventLootGenerate implements Listener {
     public void onLootGenerate(@NotNull LootGenerateEvent event) {
         //Adding the PandeCoin item randomly to a natural generated chest
         if (event.getInventoryHolder() instanceof Chest && random.nextDouble() <= 0.5) {
+            ItemPandeCoin itemPandeCoin = new ItemPandeCoin();
             Chest chest = (Chest) event.getInventoryHolder();
             Inventory inventory = chest.getInventory();
-            ItemPandeCoin item = new ItemPandeCoin();
-            ItemStack customItem = item.pandecoin();
+            ItemStack customItem = itemPandeCoin.pandecoin();
             ItemStack[] contents = inventory.getContents();
             int slot = random.nextInt(contents.length);
             contents[slot] = customItem;

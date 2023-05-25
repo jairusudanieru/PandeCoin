@@ -13,7 +13,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class CommandPandeCoin implements TabCompleter, CommandExecutor {
-
     @Override
     public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, String[] args) {
         List<String> list = new ArrayList<>();
