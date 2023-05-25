@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class CommandPandeCoin implements TabCompleter, CommandExecutor {
+    //Shows the option to the command user
     @Override
     public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, String[] args) {
         List<String> list = new ArrayList<>();
@@ -21,6 +22,7 @@ public class CommandPandeCoin implements TabCompleter, CommandExecutor {
         return Collections.emptyList();
     }
 
+    //The command to get a pandecoin
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (!command.getName().equalsIgnoreCase("pandecoin")) return false;

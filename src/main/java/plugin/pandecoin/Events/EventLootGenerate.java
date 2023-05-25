@@ -12,13 +12,12 @@ import plugin.pandecoin.Items.ItemPandeCoin;
 import java.util.Random;
 
 public class EventLootGenerate implements Listener {
-    Random random = new Random();
-
     @EventHandler
     public void onLootGenerate(@NotNull LootGenerateEvent event) {
         //Adding the PandeCoin item randomly to a natural generated chest
+        Random random = new Random();
+        ItemPandeCoin itemPandeCoin = new ItemPandeCoin();
         if (event.getInventoryHolder() instanceof Chest && random.nextDouble() <= 0.5) {
-            ItemPandeCoin itemPandeCoin = new ItemPandeCoin();
             Chest chest = (Chest) event.getInventoryHolder();
             Inventory inventory = chest.getInventory();
             ItemStack customItem = itemPandeCoin.pandecoin();

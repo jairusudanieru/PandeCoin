@@ -13,7 +13,7 @@ public final class PandeCoin extends JavaPlugin {
     public void onEnable() {
         //PandeCoin plugin startup logic
         RecipePandeCoin.registerRecipe(this);
-        Bukkit.getServer().getPluginManager().registerEvents(new EventLootGenerate(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new EventLootGenerate(),this);
         PluginCommand pandecoin = Bukkit.getPluginCommand("pandecoin");
         if (pandecoin != null) pandecoin.setExecutor(new CommandPandeCoin());
         Bukkit.getLogger().info("[PanadeCoin] Plugin Successfully Enabled!");
